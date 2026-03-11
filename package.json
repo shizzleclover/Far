@@ -1,0 +1,12 @@
+{
+  "name": "faridah-site",
+  "version": "1.0.0",
+  "description": "Static site",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve ."
+  },
+  "dependencies": {
+    "serve": "^14.2.1"
+  }
+}
