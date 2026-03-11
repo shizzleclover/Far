@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For Faridah</title>
-    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --bg-glow: #fdecd8;
@@ -55,17 +58,67 @@
             animation: floatUp 10s infinite linear;
         }
 
-        .particle:nth-child(1) { width: 6px; height: 6px; left: 10%; bottom: -10px; animation-duration: 8s; }
-        .particle:nth-child(2) { width: 4px; height: 4px; left: 30%; bottom: -10px; animation-duration: 12s; animation-delay: 2s; }
-        .particle:nth-child(3) { width: 8px; height: 8px; left: 50%; bottom: -10px; animation-duration: 9s; animation-delay: 1s; }
-        .particle:nth-child(4) { width: 5px; height: 5px; left: 70%; bottom: -10px; animation-duration: 11s; animation-delay: 3s; }
-        .particle:nth-child(5) { width: 7px; height: 7px; left: 90%; bottom: -10px; animation-duration: 10s; }
+        .particle:nth-child(1) {
+            width: 6px;
+            height: 6px;
+            left: 10%;
+            bottom: -10px;
+            animation-duration: 8s;
+        }
+
+        .particle:nth-child(2) {
+            width: 4px;
+            height: 4px;
+            left: 30%;
+            bottom: -10px;
+            animation-duration: 12s;
+            animation-delay: 2s;
+        }
+
+        .particle:nth-child(3) {
+            width: 8px;
+            height: 8px;
+            left: 50%;
+            bottom: -10px;
+            animation-duration: 9s;
+            animation-delay: 1s;
+        }
+
+        .particle:nth-child(4) {
+            width: 5px;
+            height: 5px;
+            left: 70%;
+            bottom: -10px;
+            animation-duration: 11s;
+            animation-delay: 3s;
+        }
+
+        .particle:nth-child(5) {
+            width: 7px;
+            height: 7px;
+            left: 90%;
+            bottom: -10px;
+            animation-duration: 10s;
+        }
 
         @keyframes floatUp {
-            0% { transform: translateY(0) scale(1); opacity: 0; }
-            20% { opacity: 1; }
-            80% { opacity: 1; }
-            100% { transform: translateY(-100vh) scale(1.5); opacity: 0; }
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-100vh) scale(1.5);
+                opacity: 0;
+            }
         }
 
         /* Stage and Envelope */
@@ -84,8 +137,16 @@
         }
 
         @keyframes breathe {
-            0%, 100% { transform: scale(1) translateY(0); }
-            50% { transform: scale(1.03) translateY(-5px); box-shadow: 0 20px 30px rgba(0,0,0,0.1); }
+
+            0%,
+            100% {
+                transform: scale(1) translateY(0);
+            }
+
+            50% {
+                transform: scale(1.03) translateY(-5px);
+                box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+            }
         }
 
         .envelope {
@@ -94,7 +155,7 @@
             height: 100%;
             background-color: var(--env-body);
             border-radius: 6px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
         }
 
         .envelope-back {
@@ -129,7 +190,7 @@
             height: 40px;
             background: var(--seal);
             border-radius: 50%;
-            box-shadow: inset 0 0 10px rgba(0,0,0,0.3), 0 4px 6px rgba(0,0,0,0.2);
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3), 0 4px 6px rgba(0, 0, 0, 0.2);
             z-index: 6;
             transition: opacity 0.3s ease;
         }
@@ -146,28 +207,33 @@
             font-weight: bold;
         }
 
-        .envelope-front-left, .envelope-front-right, .envelope-front-bottom {
+        .envelope-front-left,
+        .envelope-front-right,
+        .envelope-front-bottom {
             position: absolute;
             bottom: 0;
             height: 100%;
         }
 
         .envelope-front-left {
-            left: 0; width: 100%;
+            left: 0;
+            width: 100%;
             background-color: #ea9588;
             clip-path: polygon(0% 100%, 0% 0%, 50% 50%);
             z-index: 3;
         }
 
         .envelope-front-right {
-            right: 0; width: 100%;
+            right: 0;
+            width: 100%;
             background-color: #e58273;
             clip-path: polygon(100% 100%, 100% 0%, 50% 50%);
             z-index: 4;
         }
 
         .envelope-front-bottom {
-            left: 0; width: 100%;
+            left: 0;
+            width: 100%;
             background-color: var(--env-body);
             clip-path: polygon(0% 100%, 50% 50%, 100% 100%);
             z-index: 5;
@@ -184,7 +250,7 @@
             background-size: 100% 2.2em;
             border-radius: 8px;
             padding: 40px 30px;
-            box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
             z-index: 2;
             transform: translateY(0);
         }
@@ -214,7 +280,7 @@
             max-width: 600px;
             margin: 0 auto;
             /* Fade in only happens AFTER it goes fullscreen */
-            transition: opacity 0.8s ease; 
+            transition: opacity 0.8s ease;
         }
 
         .paper.fullscreen .letter-content {
@@ -240,13 +306,14 @@
         }
 
         /* Envelope Open Animations */
-        .stage.open .wax-seal {
-            opacity: 0; 
+        .stage.open .wax-seal,
+        .stage.open .tap-here {
+            opacity: 0;
         }
 
         .stage.open .envelope-flap {
             transform: rotateX(180deg);
-            z-index: 1; 
+            z-index: 1;
         }
 
         /* Initial slide up before going fullscreen */
@@ -254,13 +321,67 @@
             transform: translateY(-200px);
             z-index: 10;
         }
+
+        /* Tap Here Button */
+        .tap-here {
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--ink);
+            color: var(--paper);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-family: 'Lora', serif;
+            font-size: 14px;
+            font-weight: bold;
+            opacity: 0.8;
+            animation: bounce 2s infinite;
+            z-index: 7;
+            pointer-events: none;
+            /* Let clicks pass through to the stage */
+            white-space: nowrap;
+            transition: opacity 0.3s ease;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+
+        /* GIF styling */
+        .letter-gif {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 15px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: block;
+        }
     </style>
 </head>
+
 <body id="mainBody">
 
     <div class="particles">
-        <div class="particle"></div><div class="particle"></div>
-        <div class="particle"></div><div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
         <div class="particle"></div>
     </div>
 
@@ -270,18 +391,34 @@
             <div class="envelope-front-left"></div>
             <div class="envelope-front-right"></div>
             <div class="envelope-front-bottom"></div>
-            
+
             <div class="envelope-flap">
                 <div class="wax-seal"></div>
             </div>
-            
+
+            <div class="tap-here">Tap Here to Open</div>
+
             <div class="paper" id="paperLetter">
                 <div class="letter-content">
                     <h1>My Dear Faridah,</h1>
-                    <p>I could not let you end such a challenging day without receiving the kind of genuine effort and affirmation you truly deserve.</p>
-                    <p>I know today was heavy, really heavy. The exhaustion, the valid frustration with the conditions at work, and that sudden, overwhelming panic... it was an awful lot to carry. I just want to take this moment to remind you how proud I am of your resilience. But you should also know you should not have to be so strong all the time.</p>
-                    <p>You deserve to be celebrated, listened to, and cared for. When the system fails or the world gets too loud, please remember that my corner is always your soft place to land. No judgments, just peace.</p>
-                    <p>I hope this brings a small smile to your face before you rest. Please, do not worry for even a second about replying tonight. Just breathe, let this reassurance wash over you, and get that restorative sleep you desperately need.</p>
+                    <p>I could not let you end such a challenging day without receiving the kind of genuine effort and
+                        affirmation you truly deserve.</p>
+                    <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3ZDdqNW0yOWVkeHI0bjQzMXI2cGlzaDg3MXg1MWJxODZwZGRoNGVvZiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/nNfRs2Unc5VxI3VnQB/giphy.gif"
+                        alt="Cute GIF 1" class="letter-gif">
+                    <p>I know today was heavy, really heavy. The exhaustion, the valid frustration with the conditions
+                        at work, and that sudden, overwhelming panic... it was an awful lot to carry. I just want to
+                        take this moment to remind you how proud I am of your resilience. But you should also know you
+                        should not have to be so strong all the time.</p>
+                    <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3bTJvMWlxdjZrNnkzYnNmcGNiMGZraWZtb29nYjJ4c2luN3gxNHhsYiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/k6SImaefvartv71xUc/giphy.gif"
+                        alt="Cute GIF 2" class="letter-gif">
+                    <p>You deserve to be celebrated, listened to, and cared for. When the system fails or the world gets
+                        too loud, please remember that my corner is always your soft place to land. No judgments, just
+                        peace.</p>
+                    <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3dXhyMjhiY3JvZ2VmejN5ajY2YWFqMm1xcnpjcG13cHI0eGNlaGY2byZlcD12MV9naWZzX3NlYXJjaCZjdD1n/X42IAaDJ42pHqPllGk/giphy.gif"
+                        alt="Cute GIF 3" class="letter-gif">
+                    <p>I hope this brings a small smile to your face before you rest. Please, do not worry for even a
+                        second about replying tonight. Just breathe, let this reassurance wash over you, and get that
+                        restorative sleep you desperately need.</p>
                     <p class="signature">Always in your corner,<br>Murewa</p>
                 </div>
             </div>
@@ -292,20 +429,21 @@
         function openEnvelope() {
             const stage = document.getElementById('envelopeStage');
             const paper = document.getElementById('paperLetter');
-            
-            if(stage.classList.contains('open')) return; 
-            
+
+            if (stage.classList.contains('open')) return;
+
             // Step 1: Open the flap
             stage.classList.add('open');
-            
+
             // Step 2: After the paper slides up, trigger fullscreen
             setTimeout(() => {
                 // Removing perspective from the stage so fixed positioning works perfectly
                 stage.style.perspective = 'none';
                 paper.classList.add('fullscreen');
-            }, 800); 
+            }, 800);
         }
     </script>
 
 </body>
+
 </html>
